@@ -7,3 +7,100 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+header {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #00000099;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    animation: zoom 20s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.banner {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+
+}
+.banner-avatar {
+   position: absolute;
+   top: 25% ;
+   right: 10%; 
+}
+
+.banner h1 {
+    color: #FFF;
+    font-size: 3rem;
+    font-family: 'Baloo Da 2', serif;
+    font-weight: 200;
+    text-shadow: 0.3rem 0.4rem 5px #00000099;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+    animation: moveBanner 1.5s
+}
+@keyframes moveBanner {
+    0% {
+        transform: translateX(-999px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.banner p {
+    font-family: 'Josefin Slab', monospace;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 2.2rem;
+    text-shadow: 0.2rem 0.2rem 2px #00000099;
+    margin-bottom: 2rem;
+    animation: moveBanner 2s
+}
+
+.banner button {
+    font-family: monospace, serif;
+    color: #FFF;
+    border: none;
+    background: #f953c6;
+    background: -webkit-linear-gradient(to right, #b91d73, #f953c6);
+    background: linear-gradient(to right, #b91d73, #f953c6);
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 15px;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    animation: moveBanner 2.5s
+}
+
+.banner button:hover {
+    opacity: 0.7;
+    transition: all 0.2s ease-in;
+}
