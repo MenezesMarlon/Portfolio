@@ -11,15 +11,35 @@
 header {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 
+}
+
+.menu-hamburguer {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    top: 2.1rem;
+    right: 2.1rem;
+    z-index: 100;
+    cursor: pointer;
+
+}
+
+.line {
+    background-color: #FFF;
+    width: 100%;
+    height: 2px;
+    margin: 0.5rem 0;
+    transition: all 0.2s ease-in;
+    box-shadow: 2px 2px 5px black;
 }
 
 .img-wrapper {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     background: #00000099;
 }
 
@@ -48,10 +68,60 @@ header {
     top: 30%;
 
 }
-.banner-avatar {
-   position: absolute;
-   top: 25% ;
-   right: 10%; 
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    color: transparent;
+    right: -20rem;
+    box-shadow: 0px 0px 10px black;
+    transition: all 0.7s ease-in-out;
+}
+
+
+.show-menu .sidebar {
+    right: 0;
+}
+
+.show-menu .menu-hamburguer {
+    top: 29px;
+    transition: all 0.3s;
+}
+
+.show-menu #line1 {
+    transform: rotate(-45deg) translate(-18px, 14px);
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3 {
+    transform: rotate(45deg);
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-link {
+    font-family: monospace;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 2.5rem;
+    color: #000;
 }
 
 .banner h1 {
@@ -64,6 +134,7 @@ header {
     margin-bottom: 2rem;
     animation: moveBanner 1.5s
 }
+
 @keyframes moveBanner {
     0% {
         transform: translateX(-999px);
@@ -103,4 +174,21 @@ header {
 .banner button:hover {
     opacity: 0.7;
     transition: all 0.2s ease-in;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 1.7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-media i {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #000;
+    font-size: 2rem;
+    color: #000000;
 }
